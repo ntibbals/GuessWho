@@ -56,12 +56,15 @@ if (responseFive === 'Y' || responseFive === 'YES') {
 } else {
   alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
 }
+var numAttempts = 4;
 var numGuess = parseInt(prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?')); // variable for while loop
-while (numGuess !== 3) {
+while (numGuess !== 3 && numAttempts > 5) {
   if (numGuess > 3) {
     numGuess = parseInt(prompt('A little high. Try again.'));
-  } else {
+  } else if (numGuess <3) {
     numGuess = parseInt(prompt('A little low. Try again.'));
+  } else {
+    alert('That\'s right!');
   }
 }
 alert('Well, thanks for being a good sport ' +userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
