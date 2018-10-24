@@ -1,0 +1,35 @@
+header {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    text-align: center;
+}
+body {
+    background-color: red;
+}
+h1 {
+    color: rgb(12, 12, 240);
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.headshot {
+    width: 20%;
+
+}
+.abouttitle {
+    text-align: center;
+    text-decoration: none;
+}
+.aboutsection {
+    text-align: center;
+}
+ul {
+    border: 2px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-right auto;
+    max-width: 400px;
+}
