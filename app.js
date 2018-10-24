@@ -48,7 +48,7 @@ if (responseFour === 'Y' || responseFour === 'YES') {
   alert('Sorry but I\'m 31 years old.');
 }
 console.log('Checking responseFive before prompt, should be invalid', responseFive);
-var responseFive = prompt('Lastly, try guessing if I like sushi?').toUpperCase(); //fifth response including if/else statements on response, forcing each answer to be stored in Upper Case
+var responseFive = prompt('Try guessing if I like sushi?').toUpperCase(); //fifth response including if/else statements on response, forcing each answer to be stored in Upper Case
 console.log('Checking responseFive after prompt, should be valid', responseFive);
 //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
 if (responseFive === 'Y' || responseFive === 'YES') {
@@ -56,5 +56,14 @@ if (responseFive === 'Y' || responseFive === 'YES') {
 } else {
   alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
 }
+var numGuess = parseInt(prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?')); // variable for while loop
+while (numGuess !== 3) {
+  if (numGuess > 3) {
+    numGuess = parseInt(prompt('A little high. Try again.'));
+  } else {
+    numGuess = parseInt(prompt('A little low. Try again.'));
+  }
+}
+alert('Well, thanks for being a good sport ' +userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
 alert('Well, thanks for being a good sport ' +userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
 
