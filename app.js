@@ -1,8 +1,8 @@
 "use strict";
-console.log('Checking userName before prompt, should be invalid', userName);
+// console.log('Checking userName before prompt, should be invalid', userName);
 var userName = prompt('Thanks for your interest. It\'s a pleasure to meet you virtually! If you don\'t, what\'s your name?'); //First quesiton prompt for name
-console.log('Checking userName after prompt, should be valid', userName);
-// if then else statements quantify if name length is exactly 4, alert message, if less than 4 alert different message or if greater than 4 alert different msg
+// console.log('Checking userName after prompt, should be valid', userName);
+// //if then else statements quantify if name length is exactly 4, alert message, if less than 4 alert different message or if greater than 4 alert different msg
 // if (userName.length === 4) {
 //   alert('Wow! We have the exact same characters in our name ' + userName + '. Welcome.'); 
 // } else if (userName.length > 4) {
@@ -11,15 +11,18 @@ console.log('Checking userName after prompt, should be valid', userName);
 //   alert('Did you know that there are some studies that show those with fewer characters in their name, tend to make more money? Thanks for visiting ' + userName + '.');
 // }
 // alert('Now that we have the introductions out of the way, please take a couple minutes to take play along with the following questiosn. Also, please only respond with Yes or No answers. Thanks ahead of time!');
+// var numCorrect = 0;
 // console.log('Checking responseOne before prompt, should be invalid', responseOne);
 // var responseOne = prompt('To start, ' + userName + ', try guessing if I am originally from the Seattle area?').toUpperCase(); //first response including if/else statements on response, forcing each answer to be stored in Upper Case
-// console.log('Checking responseOne after prompt, should be valid', responseOne);
 // //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
+// console.log('Checking responseOne after prompt, should be valid', responseOne);
 // if (responseOne === 'Y' || responseOne === 'YES') {
 //   alert('Unfortunately, no. I was actually born in Spoakne Valley, WA!');
+//   numCorrect++;
 // } else {
 //   alert('That\'s right! I\'m not originally from the Pudget Sound. I\'m actually from the east side of the state.');
 // }
+// console.log('Checking number correct', numCorrect);
 // console.log('Checking responseTwo before prompt, should be invalid', responseTwo);
 // var responseTwo = prompt('Next, do you think I own a dog?').toUpperCase();//second response including if/else statements on response, forcing each answer to be stored in Upper Case
 // console.log('Checking responseTwo after prompt, should be valid', responseTwo);
@@ -56,16 +59,28 @@ console.log('Checking userName after prompt, should be valid', userName);
 // } else {
 //   alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
 // }
-var numAttempts = 1; //vairable limiting total number of attempts
+var numAttempts = 0; //vairable limiting total number of attempts
 var numGuess = parseInt(prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?')); // variable for while loop
-while (numGuess !== 3 && numAttempts < 4) {
-  if (numGuess > 3 ) {
+console.log('number of attempted guesses', numGuess); // variable for while loop
+while (numGuess !== 3 && numAttempts < 3) {
+  if (numGuess > 3) {
     numGuess = parseInt(prompt('A little high. Try again.'));
-  } else if (numGuess <3) {
+    console.log('number of attempted guesses', numGuess);
+    numAttempts++;
+  } else if (numGuess < 3) {
     numGuess = parseInt(prompt('A little low. Try again.'));
-  } else (numGuess =3);
-  numAttempts++;
+    console.log('number of attempted guesses', numGuess);
+    numAttempts++;
+  }
 }
-alert('That\'s right!');
-alert('Well, thanks for being a good sport ' +userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
+if (numGuess !== 3) {
+  alert('Sorry, too many chances. I\'ve lived in 3 apartments over the last 6 years through the Greater Seattle area.');
+  console.log('number of attempted guesses', numGuess);
+} else {
+  alert('That\'s right!');
+  console.log('number of attempted guesses', numGuess);
+}
+var favAnimals = ['Tiger', 'Lion', 'Panther', 'Shark'];
+
+alert('Well, thanks for being a good sport ' + userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
 
