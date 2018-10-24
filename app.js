@@ -80,7 +80,17 @@ if (numGuess !== 3) {
   alert('That\'s right!');
   console.log('number of attempted guesses', numGuess);
 }
-var favAnimals = ['Tiger', 'Lion', 'Panther', 'Shark'];
+var favAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK'];
 
+var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?');
+for (var i = 0; favGuess === [favAnimals] && i < 7; i++) {
+  if (favGuess !==[favAnimals]) {
+    alert('Sorry. Try again');
+    i++;
+  }
+  if(favGuess === [favAnimals]); {
+    alert('Wow! That was a great guess.');
+  }
+}
 alert('Well, thanks for being a good sport ' + userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
 
