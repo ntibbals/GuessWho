@@ -56,14 +56,14 @@ console.log('Checking userName after prompt, should be valid', userName);
 // } else {
 //   alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
 // }
-var numAttempts = 1;
+var numAttempts = 1; //vairable limiting total number of attempts
 var numGuess = parseInt(prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?')); // variable for while loop
 while (numGuess !== 3 && numAttempts < 4) {
   if (numGuess > 3 ) {
     numGuess = parseInt(prompt('A little high. Try again.'));
   } else if (numGuess <3) {
     numGuess = parseInt(prompt('A little low. Try again.'));
-  } 
+  } else (numGuess =3);
   numAttempts++;
 }
 alert('That\'s right!');
