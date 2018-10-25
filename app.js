@@ -94,38 +94,14 @@ if (numGuess !== 3) {
   console.log('Checking number correct', numCorrect);
 
 }
-var favAnimals = ['Tiger', 'Lion', 'Panther', 'Shark']; //array
-var counter = 0; //counter for while loop
-var correct = false;
-console.log('Guess of favorite animal before question, should be invalid', favGuess);
-var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase(); //7th quesiton-guess of favorite animal in array
-console.log('Guess of favorite animal', favGuess);
-console.log('Log before while loop for Guess', favGuess);
-alert('Test');
-while (counter > 5 && favGuess !== favAnimals.lenth) {
-  counter++;
-  for (var i = 0; i <= favAnimals.length; i++) {
-    console.log('Favorite animal guesses in for loop', favGuess);
-    console.log('Guess on favorite animal in for loop prior to if statement', favGuess);
-    if (favGuess === favAnimals[i]) {
-      alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
-      correct = true;
-      //numCorrect++;
-      break;
-    } else {
-      favGuess = prompt('Sorry. Try again').toUpperCase();
-      console.log('Guess on favorite animal in for loop else statement', favGuess);
-    }
-  }
-}
 var favoriteAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK'];
 var counter2 = 0;
 var answer = false;
 var animalGuess = prompt('Guess one of my favorite animals?').toUpperCase();
-
+//while loop to control total number of guesses - for loop controls running through array
 while (counter2 <= 5) {
   for (var j = 0; j <= favoriteAnimals.length; j++) {
-    if (animalGuess === favoriteAnimals[i]) {
+    if (animalGuess === favoriteAnimals[j]) {
       answer = true;
     }
   } if (answer === true) {
@@ -137,6 +113,7 @@ while (counter2 <= 5) {
     counter2++;
   }
 }
+//below is the overall counter for total correct
 if (numCorrect > 4) {
   alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + ' out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
 } else {
