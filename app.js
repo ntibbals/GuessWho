@@ -98,15 +98,18 @@ console.log('Guess of favorite animal before question, should be invalid', favGu
 var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase(); //7th quesiton-guess of favorite animal in array
 console.log('Guess of favorite animal', favGuess);
 console.log('Log before while loop for Guess', favGuess);
+// if (favAnimals.some(favGuess === favAnimals.contains)) {
+//   alert('YES!');
+//}
 while (counter < 5 && favGuess !== favAnimals) {
   counter++;
   for (var i = 0; i <= favAnimals.length; i++) {
     console.log('Favorite animal guesses in for loop', favGuess);
     console.log('Guess on favorite animal in for loop prior to if statement', favGuess);
-    if (favGuess !== favAnimals) {
+    if (favAnimals.includes(favGuess !== favAnimals.contains)) {
       favGuess = prompt('Sorry. Try again').toUpperCase();
       console.log('Guess on favorite animal in for loop if statement', favGuess);
-    } else if (favGuess === favAnimals); {
+    } else if (favAnimals.includes(favGuess === favAnimals.contains)); {
       alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
       console.log('Guess on favorite animal in for loop else statement', favGuess);
       break;
