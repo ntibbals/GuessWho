@@ -92,31 +92,29 @@ if (numGuess !== 3) {
   console.log('Checking number correct', numCorrect);
 
 }
-var favAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK']; //array
+var favAnimals = ['Tiger', 'Lion', 'Panther', 'Shark']; //array
+var counter = 0; //counter for while loop
 console.log('Guess of favorite animal before question, should be invalid', favGuess);
 var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase(); //7th quesiton-guess of favorite animal in array
 console.log('Guess of favorite animal', favGuess);
-var counter = 0; //counter for while loop
-var response = false;
-
-while (counter < 5 && response === false) {
+console.log('Log before while loop for Guess', favGuess);
+while (counter < 5 && favGuess !== favAnimals) {
   counter++;
-  for (var i = 0; i < favAnimals.length; i++) {
+  for (var i = 0; i <= favAnimals.length; i++) {
     console.log('Favorite animal guesses in for loop', favGuess);
-    if (favGuess !== favAnimals[i]) {
+    console.log('Guess on favorite animal in for loop prior to if statement', favGuess);
+    if (favGuess !== favAnimals) {
       favGuess = prompt('Sorry. Try again').toUpperCase();
       console.log('Guess on favorite animal in for loop if statement', favGuess);
-    }
-    else (favGuess === favAnimals[i]); {
-      alert('Wow! That was a great guess. My favorite animals are a' + favAnimals.length + '\'s,');
+    } else if (favGuess === favAnimals); {
+      alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
       console.log('Guess on favorite animal in for loop else statement', favGuess);
       break;
     }
   }
 }
-
 if (numCorrect > 4) {
-  alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + 'out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
+  alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + ' out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
 } else {
   alert('Sorry but it looks like you only got ' + numCorrect + ' out of 7 questions. No worries, let\'s grab coffee sometime regardless!');
 }
