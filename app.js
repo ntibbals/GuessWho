@@ -106,13 +106,14 @@ while (counter < 5 && favGuess !== favAnimals) {
   for (var i = 0; i <= favAnimals.length; i++) {
     console.log('Favorite animal guesses in for loop', favGuess);
     console.log('Guess on favorite animal in for loop prior to if statement', favGuess);
-    if (favAnimals.includes(favGuess !== favAnimals.contains)) {
-      favGuess = prompt('Sorry. Try again').toUpperCase();
-      console.log('Guess on favorite animal in for loop if statement', favGuess);
-    } else if (favAnimals.includes(favGuess === favAnimals.contains)); {
+    if (favGuess === favAnimals.contains) {
       alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
-      console.log('Guess on favorite animal in for loop else statement', favGuess);
       break;
+    } else (favGuess === favAnimals.contains); {
+      favGuess = prompt('Sorry. Try again').toUpperCase();
+      alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
+      numCorrect++;
+      console.log('Guess on favorite animal in for loop else statement', favGuess);
     }
   }
 }
