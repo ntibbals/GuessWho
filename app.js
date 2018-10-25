@@ -74,13 +74,15 @@ while (numGuess !== 3 && numAttempts < 3) {
   if (numGuess > 3) {
     numGuess = parseInt(prompt('A little high. Try again.'));
     console.log('number of attempted guesses', numGuess);
-    numAttempts++;
     // if statement logging if attempt is greater than answer
   } else if (numGuess < 3) {
     numGuess = parseInt(prompt('A little low. Try again.'));
     console.log('number of attempted guesses', numGuess);
-    numAttempts++;
-  } // if statement logging attempt if less than answer
+  } else {
+    numGuess = parseInt(prompt(numGuess + ' is not a number. Try Again!'));
+  }
+  console.log('number of attempted guesses', numGuess);
+  numAttempts++; // if statement logging attempt if less than answer
 }
 if (numGuess !== 3) {
   alert('Sorry, too many chances. I\'ve lived in 3 apartments over the last 6 years through the Greater Seattle area.');
@@ -94,27 +96,45 @@ if (numGuess !== 3) {
 }
 var favAnimals = ['Tiger', 'Lion', 'Panther', 'Shark']; //array
 var counter = 0; //counter for while loop
+var correct = false;
 console.log('Guess of favorite animal before question, should be invalid', favGuess);
 var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase(); //7th quesiton-guess of favorite animal in array
 console.log('Guess of favorite animal', favGuess);
 console.log('Log before while loop for Guess', favGuess);
-// if (favAnimals.some(favGuess === favAnimals.contains)) {
-//   alert('YES!');
-//}
-while (counter < 5 && favGuess !== favAnimals) {
+alert('Test');
+while (counter > 5 && favGuess !== favAnimals.lenth) {
   counter++;
   for (var i = 0; i <= favAnimals.length; i++) {
     console.log('Favorite animal guesses in for loop', favGuess);
     console.log('Guess on favorite animal in for loop prior to if statement', favGuess);
-    if (favGuess === favAnimals.contains) {
+    if (favGuess === favAnimals[i]) {
       alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
+      correct = true;
+      //numCorrect++;
       break;
-    } else (favGuess === favAnimals.contains); {
+    } else {
       favGuess = prompt('Sorry. Try again').toUpperCase();
-      alert('Wow! That was a great guess. My favorite animals are a ' + favAnimals + '.');
-      numCorrect++;
       console.log('Guess on favorite animal in for loop else statement', favGuess);
     }
+  }
+}
+var favoriteAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK'];
+var counter2 = 0;
+var answer = false;
+var animalGuess = prompt('Guess one of my favorite animals?').toUpperCase();
+
+while (counter2 <= 5) {
+  for (var j = 0; j <= favoriteAnimals.length; j++) {
+    if (animalGuess === favoriteAnimals[i]) {
+      answer = true;
+    }
+  } if (answer === true) {
+    alert('Congrats. My favorite animals are ' + favoriteAnimals + '.');
+    numCorrect++;
+    break;
+  } else {
+    animalGuess = prompt('Sorry. Try again').toUpperCase();
+    counter2++;
   }
 }
 if (numCorrect > 4) {

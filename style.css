@@ -22,15 +22,21 @@ h2 {
     box-sizing: outline;
 }
 .goals {
+    position: relative;
+}
+.movies {
     float:none;
     box-sizing: none;
-    margin-left: auto;
+    margin-left: 450px;
     box-sizing: outline;
+    position: aboslute;
 }
 .headshot {
     width: 20%;
     box-sizing: outline;
     float: left;
+    position: absolute;
+    padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 50px;
     box-sizing: outline;
