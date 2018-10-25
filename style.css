@@ -2,34 +2,54 @@ header {
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
     text-align: center;
+    box-sizing: outline;
+    text-decoration: underline;
+    background-image: url("./skyline.jpg");
+    height: 200px;
 }
 body {
     background-color: red;
+    box-sizing: outline;
 }
 h1 {
     color: rgb(12, 12, 240);
     text-align: center;
+    box-sizing: outline;
 }
 
 h2 {
     text-decoration: underline;
+    box-sizing: outline;
 }
-
+.goals {
+    float:none;
+    box-sizing: none;
+    margin-left: auto;
+    box-sizing: outline;
+}
 .headshot {
     width: 20%;
+    box-sizing: outline;
+    float: left;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    box-sizing: outline;
 
 }
 .abouttitle {
     text-align: center;
     text-decoration: none;
+    box-sizing: outline;
 }
 .aboutsection {
     text-align: center;
+    box-sizing: outline;
 }
 ul {
     border: 2px solid black;
     padding-bottom: 5px;
     padding-top: 5px;
-    border-right auto;
+    border-right: auto;
     max-width: 400px;
+    box-sizing: outline;
 }

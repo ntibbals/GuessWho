@@ -31,6 +31,8 @@ if (responseTwo === 'Y' || responseTwo === 'YES') {
   alert('I hate to admit this, but no. I was actually roped into taking in two rescue cats who are actually brother and sister. All thanks to my beautiful girlfriend.');
 } else {
   alert('You\'re right! I\'m currently living downtown without a backyard so as a result, my girlfriend and I have two cats.');
+  numCorrect++;
+  console.log('Checking number correct', numCorrect);
 }
 console.log('Checking responseThree before prompt, should be invalid', responseThree); //third response including if/else statements on response, forcing each answer to be stored in Upper Case
 var responseThree = prompt('Once again, thanks for playing. Next, try guessing whether I am an only sibling?').toUpperCase();
@@ -40,6 +42,8 @@ if (responseThree === 'Y' || responseThree === 'YES') {
   alert('No. I was blessed with an awesome brother and sister!');
 } else {
   alert('You\'re right. I have both an incredible brother named Michael-Ray and awesome sister named Nicole');
+  numCorrect++;
+  console.log('Checking number correct', numCorrect);
 }
 console.log('Checking responseFour before prompt, should be invalid', responseFour);
 var responseFour = prompt('Next, try taking a guess on whether you think I am more than 30 years old?').toUpperCase(); //fourth response including if/else statements on response, forcing each answer to be stored in Upper Case
@@ -47,6 +51,8 @@ console.log('Checking responseFour after prompt, should be valid', responseFour)
 //subsequent if then else statements quantify if 'Y,y,Yes,yes' alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
 if (responseFour === 'Y' || responseFour === 'YES') {
   alert('Ding ding, we have a winner. I\'m 31 years old.');
+  numCorrect++;
+  console.log('Checking number correct', numCorrect);
 } else {
   alert('Sorry but I\'m 31 years old.');
 }
@@ -56,6 +62,8 @@ console.log('Checking responseFive after prompt, should be valid', responseFive)
 //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
 if (responseFive === 'Y' || responseFive === 'YES') {
   alert('A bit of a trick question as we live so close to AMAZING sushi. This is an absolute yes.');
+  numCorrect++;
+  console.log('Checking number correct', numCorrect);
 } else {
   alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
 }
@@ -80,32 +88,36 @@ if (numGuess !== 3) {
 } else {
   alert('That\'s right!'); //alert for when correct
   console.log('number of attempted guesses', numGuess);
-}
-var favAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK'];
+  numCorrect++;
+  console.log('Checking number correct', numCorrect);
 
-var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase();
+}
+var favAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK']; //array
+console.log('Guess of favorite animal before question, should be invalid', favGuess);
+var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase(); //7th quesiton-guess of favorite animal in array
 console.log('Guess of favorite animal', favGuess);
-var counter = 0;
+var counter = 0; //counter for while loop
 var response = false;
 
 while (counter < 5 && response === false) {
   counter++;
   for (var i = 0; i < favAnimals.length; i++) {
-    console.log('Favorite animal guesses', favGuess);
+    console.log('Favorite animal guesses in for loop', favGuess);
     if (favGuess !== favAnimals[i]) {
       favGuess = prompt('Sorry. Try again').toUpperCase();
-      console.log('Guess on favorite animal', favGuess);
+      console.log('Guess on favorite animal in for loop if statement', favGuess);
     }
     else (favGuess === favAnimals[i]); {
-      alert('Wow! That was a great guess. ' + favGuess + '\'s,');
-      console.log('Guess on favorite animal', favGuess);
-      response = true
+      alert('Wow! That was a great guess. My favorite animals are a' + favAnimals.length + '\'s,');
+      console.log('Guess on favorite animal in for loop else statement', favGuess);
       break;
     }
   }
 }
 
-
-
-alert('Well, thanks for being a good sport ' + userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
+if (numCorrect > 4) {
+  alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + 'out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
+} else {
+  alert('Sorry but it looks like you only got ' + numCorrect + ' out of 7 questions. No worries, let\'s grab coffee sometime regardless!');
+}
 
