@@ -67,30 +67,38 @@ while (numGuess !== 3 && numAttempts < 3) {
     numGuess = parseInt(prompt('A little high. Try again.'));
     console.log('number of attempted guesses', numGuess);
     numAttempts++;
+    // if statement logging if attempt is greater than answer
   } else if (numGuess < 3) {
     numGuess = parseInt(prompt('A little low. Try again.'));
     console.log('number of attempted guesses', numGuess);
     numAttempts++;
-  }
+  } // if statement logging attempt if less than answer
 }
 if (numGuess !== 3) {
   alert('Sorry, too many chances. I\'ve lived in 3 apartments over the last 6 years through the Greater Seattle area.');
-  console.log('number of attempted guesses', numGuess);
+  console.log('number of attempted guesses', numGuess); // catches loop if hit limit on guesses and not answer
 } else {
-  alert('That\'s right!');
+  alert('That\'s right!'); //alert for when correct
   console.log('number of attempted guesses', numGuess);
 }
 var favAnimals = ['TIGER', 'LION', 'PANTHER', 'SHARK'];
 
-var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?');
-for (var i = 0; favGuess === [favAnimals] && i < 7; i++) {
-  if (favGuess !==[favAnimals]) {
-    alert('Sorry. Try again');
-    i++;
+var favGuess = prompt('Now, let\'s see if you can guess one of my top four favorite animals?').toUpperCase();
+console.log('Guess of favorite animal', favGuess);
+for (var i = 0; i < favAnimals.length; i++) {
+  console.log('Favorite animal guesses', favGuess);
+  if (favGuess !== favAnimals[i]) {
+    favGuess = prompt('Sorry. Try again').toUpperCase();
+    console.log('Guess on favorite animal', favGuess);
   }
-  if(favGuess === [favAnimals]); {
-    alert('Wow! That was a great guess.');
+  else (favGuess === favAnimals[i]); {
+    alert('Wow! That was a great guess. ' + favGuess + '\'s,');
+    console.log('Guess on favorite animal', favGuess);
+    break;
   }
 }
+
+
+
 alert('Well, thanks for being a good sport ' + userName + ' and playing. Hope to speak with you soon.'); //final alert thanking end user
 
