@@ -1,5 +1,4 @@
 'use strict';
-
 //username question
 console.log('Checking userName before prompt, should be invalid', userName);
 var userName = prompt('Thanks for your interest. It\'s a pleasure to meet you virtually! If you don\'t mind, what\'s your name?'); //First quesiton prompt for name
