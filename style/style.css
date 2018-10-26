@@ -4,7 +4,7 @@ header {
     text-align: center;
     box-sizing: outline;
     text-decoration: underline;
-    background-image: url("./skyline.jpg");
+    background-image: url("../images/skyline.jpg");
     height: 200px;
 }
 /* .skyline {
@@ -21,6 +21,8 @@ body {
 }
 h1 {
     color: rgb(1, 18, 27);
+    padding: 5px;
+    font-size: 35px;
     text-align: center;
     box-sizing: outline;
     text-shadow: 2px 2px 7px #111111;
@@ -29,6 +31,7 @@ h1 {
 h2 {
     text-decoration: underline;
     box-sizing: outline;
+    padding: 10px;
 }
 .goals {
     position: relative;
@@ -49,8 +52,10 @@ h2 {
     padding-right: 50px;
     margin-bottom: 50px;
     box-sizing: outline;
+    padding-top: 10px;
 
 }
+
 .abouttitle {
     text-align: center;
     text-decoration: none;
@@ -70,4 +75,6 @@ ul {
     border-right: auto;
     max-width: 400px;
     box-sizing: outline;
+    list-style-type: georgian;
+
 }

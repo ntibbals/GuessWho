@@ -1,5 +1,6 @@
-//  First question.
+'user strict';
 
+//username question
 console.log('Checking userName before prompt, should be invalid', userName);
 var userName = prompt('Thanks for your interest. It\'s a pleasure to meet you virtually! If you don\'t mind, what\'s your name?'); //First quesiton prompt for name
 console.log('Checking userName after prompt, should be valid', userName);
@@ -85,19 +86,24 @@ function questFive() {
 }
 questFive();
 function questSix() {
+  var numGuess = 0;
   var numAttempts = 0; //vairable limiting total number of attempts
-  var numGuess = parseInt(prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?')); // variable for while loop
+  var origNumGuess = prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?');
+  numGuess = parseInt(origNumGuess); // variable for while loop
   console.log('number of attempted guesses', numGuess); // variable for while loop
   while (numGuess !== 3 && numAttempts < 3) {
-    if (numGuess > 3) {
-      numGuess = parseInt(prompt('A little high. Try again.'));
+    if (origNumGuess > 3) {
+      origNumGuess = prompt('A little high. Try again.');
+      numGuess = parseInt(origNumGuess);
       console.log('number of attempted guesses', numGuess);
       // if statement logging if attempt is greater than answer
-    } else if (numGuess < 3) {
-      numGuess = parseInt(prompt('A little low. Try again.'));
+    } else if (origNumGuess < 3) {
+      origNumGuess = prompt('A little low. Try again.');
+      numGuess = parseInt(origNumGuess);
       console.log('number of attempted guesses', numGuess);
     } else {
-      numGuess = parseInt(prompt(numGuess + ' is not a number. Try Again!'));
+      origNumGuess = prompt(origNumGuess + ' is not a number. Try Again!');
+      numGuess = parseInt(origNumGuess);
     }
     console.log('number of attempted guesses', numGuess);
     numAttempts++; // if statement logging attempt if less than answer
@@ -121,14 +127,14 @@ function questSeven() {
   var animalGuess = prompt('Guess one of my favorite animals?').toUpperCase();
   //while loop to control total number of guesses - for loop controls running through array
   while (counter2 <= 5) {
-    for (var j = 0; j <= favoriteAnimals.length; j++) {
+    for (var j = 0; j <= favoriteAnimals.length; j++) { //for loop to control running through the array
       if (animalGuess === favoriteAnimals[j]) {
-        answer = true;
+        answer = true; //break out of the for loop
       }
-    } if (answer === true) {
+    } if (answer === true) { // can also use variation if (answer) { alert}
       alert('Congrats. My favorite animals are ' + favoriteAnimals + '.');
       numCorrect++;
-      break;
+      break; // for while loop
     } else {
       animalGuess = prompt('Sorry. Try again').toUpperCase();
       counter2++;
