@@ -129,16 +129,18 @@ function questSeven() {
       numCorrect++;
       break;
     } else {
-      animalGuess = prompt('Sorry. Try again').toUpperCase();
+      animalGuess = prompt('Sorry. Try again').toUpperCase(); z
       counter2++;
     }
   }
-  //below is the overall counter for total correct
-  if (numCorrect > 4) {
-    alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + ' out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
-  } else {
-    alert('Sorry but it looks like you only got ' + numCorrect + ' out of 7 questions. No worries, let\'s grab coffee sometime regardless!');
-  }
 }
 questSeven();
+//below is the overall counter for total correct
+if (numCorrect > 4) {
+  alert('Well, thanks for being a good sport ' + userName + ' and playing. It looks like you got ' + numCorrect + ' out of 7 questions. That\'s impressive. Hope to speak with you soon.'); //alert if total correct greater than 4
+} else {
+  alert('Sorry but it looks like you only got ' + numCorrect + ' out of 7 questions. No worries, let\'s grab coffee sometime regardless!');
+}
+
+
 
