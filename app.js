@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 //username question
 console.log('Checking userName before prompt, should be invalid', userName);
