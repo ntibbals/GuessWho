@@ -7,14 +7,23 @@ header {
     background-image: url("./skyline.jpg");
     height: 200px;
 }
+/* .skyline {
+    box-sizing: outline;
+    position: absolute;
+    padding-right: 150px;
+    margin-left: 225px;
+    margin-bottom: 150px;
+    padding-bottom: 150px;
+} */
 body {
-    background-color: red;
+    background-color: rgb(120, 120, 151);
     box-sizing: outline;
 }
 h1 {
-    color: rgb(12, 12, 240);
+    color: rgb(1, 18, 27);
     text-align: center;
     box-sizing: outline;
+    text-shadow: 2px 2px 7px #111111;
 }
 
 h2 {
@@ -50,6 +59,9 @@ h2 {
 .aboutsection {
     text-align: center;
     box-sizing: outline;
+}
+.aboutsection:first-letter{
+    font-size: 200%;
 }
 ul {
     border: 2px solid black;
