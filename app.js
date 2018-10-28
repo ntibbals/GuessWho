@@ -14,76 +14,24 @@ if (userName.length === 4) {
 
 alert('Now that we have the introductions out of the way, please take a couple minutes to play along with the following questions. For the first five questions, please only respond with Yes or No answers. Thanks ahead of time!');
 var numCorrect = 0;
-function questOne() {
-  console.log('Checking responseOne before prompt, should be invalid', responseOne);
-  var responseOne = prompt('To start, ' + userName + ', try guessing if I am originally from the Seattle area?').toUpperCase(); //first response including if/else statements on response, forcing each answer to be stored in Upper Case
-  //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
-  console.log('Checking responseOne after prompt, should be valid', responseOne);
-  if (responseOne === 'N' || responseOne === 'NO') {
-    alert('That\'s right! I\'m not originally from the Pudget Sound. I\'m actually from the east side of the state.');
-    numCorrect++;
-  } else {
-    alert('Unfortunately, no. I was actually born in Spoakne Valley, WA!');
+function questionsOneThroughFive() { }
+var questions = ['To start, ' + userName + ', try guessing if I am originally from the Seattle area?', 'Next, do you think I own a dog?', 'Once again, thanks for playing. Next, try guessing whether I am an only sibling?', 'Next, try taking a guess on whether you think I am more than 30 years old?', 'Try guessing if I like sushi?'];
+var answer = ['NO', 'NO', 'NO', 'YES', 'YES'];
+var responseTrue = ['That\'s right! I\'m not originally from the Pudget Sound. I\'m actually from the east side of the state.', 'You\'re right! I\'m currently living downtown with no backyard so as a result, my girlfriend and I have two cats.', 'You\'re right. I have both an incredible brother named Michael-Ray and awesome sister named Nicole', 'Ding ding, we have a winner. I\'m 31 years old.', 'A bit of a trick question as I live so close to AMAZING sushi. This is an absolute yes.'];
+var responseFalse = ['No. I was actually born in Spoakne Valley, WA!', 'Unfortunately, no. However, I do have two rescue cats who are brother and sister named Vader and Sky.', 'No. I was blessed with an awesome brother and sister!', 'No. I\'m 31 years old.', 'I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.'];
+// var guessAnswer = prompt( questions[a]).toUpperCase();
+console.log('Checking before loop', guessAnswer);
+for (var a = 0; a < questions.length; a++) {
+  var guessAnswer = prompt(questions[a]).toUpperCase(); {
+    if (guessAnswer === answer[a]) {
+      alert(responseTrue[a]);
+      numCorrect++;
+    } else {
+      alert(responseFalse[a]);
+    }
   }
 }
-questOne();
-console.log('Checking number correct', numCorrect);
-function questTwo() {
-  console.log('Checking responseTwo before prompt, should be invalid', responseTwo);
-  var responseTwo = prompt('Next, do you think I own a dog?').toUpperCase();//second response including if/else statements on response, forcing each answer to be stored in Upper Case
-  console.log('Checking responseTwo after prompt, should be valid', responseTwo);
-  //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
-  if (responseTwo === 'N' || responseTwo === 'NO') {
-    alert('You\'re right! I\'m currently living downtown with no backyard so as a result, my girlfriend and I have two cats.');
-    numCorrect++;
-  } else {
-    alert('Unfortunately, no. However, I do have two rescue cats who are actually brother and sister named Vader and Sky.');
-  }
-}
-console.log('Checking number correct', numCorrect);
-questTwo();
-function questThree() {
-  console.log('Checking responseThree before prompt, should be invalid', responseThree); //third response including if/else statements on response, forcing each answer to be stored in Upper Case
-  var responseThree = prompt('Once again, thanks for playing. Next, try guessing whether I am an only sibling?').toUpperCase();
-  console.log('Checking responseThree after prompt, should be valid', responseThree);
-  //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
-  if (responseThree === 'N' || responseThree === 'NO') {
-    alert('You\'re right. I have both an incredible brother named Michael-Ray and awesome sister named Nicole');
-    numCorrect++;
-  } else {
-    alert('No. I was blessed with an awesome brother and sister!');
-    console.log('Checking number correct', numCorrect);
-  }
-}
-questThree();
-function questFour() {
-  console.log('Checking responseFour before prompt, should be invalid', responseFour);
-  var responseFour = prompt('Next, try taking a guess on whether you think I am more than 30 years old?').toUpperCase(); //fourth response including if/else statements on response, forcing each answer to be stored in Upper Case
-  console.log('Checking responseFour after prompt, should be valid', responseFour);
-  //subsequent if then else statements quantify if 'Y,y,Yes,yes' alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
-  if (responseFour === 'Y' || responseFour === 'YES') {
-    alert('Ding ding, we have a winner. I\'m 31 years old.');
-    numCorrect++;
-    console.log('Checking number correct', numCorrect);
-  } else {
-    alert('Sorry but I\'m 31 years old.');
-  }
-}
-questFour();
-function questFive() {
-  console.log('Checking responseFive before prompt, should be invalid', responseFive);
-  var responseFive = prompt('Try guessing if I like sushi?').toUpperCase(); //fifth response including if/else statements on response, forcing each answer to be stored in Upper Case
-  console.log('Checking responseFive after prompt, should be valid', responseFive);
-  //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
-  if (responseFive === 'Y' || responseFive === 'YES') {
-    alert('A bit of a trick question as I live so close to AMAZING sushi. This is an absolute yes.');
-    numCorrect++;
-    console.log('Checking number correct', numCorrect);
-  } else {
-    alert('I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.');
-  }
-}
-questFive();
+questionsOneThroughFive();
 function questSix() {
   var numGuess;
   var numAttempts = 0; //vairable limiting total number of attempts
