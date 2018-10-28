@@ -31,6 +31,7 @@ main {
     background-color: rgb(120, 120, 151);
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: -5px;
 }
 nav {
     font-size: 12px;
@@ -54,8 +55,8 @@ nav {
     text-align: auto;
     margin-left: 300px;
     margin-right: 300px;
+    word-spacing: 1em;
 }
-
 h1 {
     color: rgb(1, 18, 27);
     padding: 5px;
@@ -63,7 +64,8 @@ h1 {
     text-align: center;
     box-sizing: outline;
     text-shadow: 2px 2px 7px #111111;
-    padding-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 h2 {

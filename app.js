@@ -12,7 +12,7 @@ if (userName.length === 4) {
   alert('Did you know that there are some studies that show those with fewer characters in their name, tend to make more money? Thanks for visiting ' + userName + '.');
 }
 
-alert('Now that we have the introductions out of the way, please take a couple minutes to take play along with the following questions. For the first five questions, please only respond with Yes or No answers. Thanks ahead of time!');
+alert('Now that we have the introductions out of the way, please take a couple minutes to play along with the following questions. For the first five questions, please only respond with Yes or No answers. Thanks ahead of time!');
 var numCorrect = 0;
 function questOne() {
   console.log('Checking responseOne before prompt, should be invalid', responseOne);
@@ -34,10 +34,10 @@ function questTwo() {
   console.log('Checking responseTwo after prompt, should be valid', responseTwo);
   //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
   if (responseTwo === 'N' || responseTwo === 'NO') {
-    alert('You\'re right! I\'m currently living downtown without a backyard so as a result, my girlfriend and I have two cats.');
+    alert('You\'re right! I\'m currently living downtown no backyard so as a result, my girlfriend and I have two cats.');
     numCorrect++;
   } else {
-    alert('I hate to admit this, but no. I was actually roped into taking in two rescue cats who are actually brother and sister. All thanks to my beautiful girlfriend.');
+    alert('Unfortunately, no. However, I do have two rescue cats who are actually brother and sister named Vader and Sky.');
   }
 }
 console.log('Checking number correct', numCorrect);
