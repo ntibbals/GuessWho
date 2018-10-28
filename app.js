@@ -7,12 +7,12 @@ console.log('Checking userName after prompt, should be valid', userName);
 if (userName.length === 4) {
   alert('Wow! We have the exact same characters in our name ' + userName + '. Welcome.');
 } else if (userName.length > 4) {
-  alert('Thanks for coming' + userName + '. I appreciate you trusting with your personal information. I\'ll guard it closely.');
+  alert('Thanks for coming ' + userName + '. I appreciate you trusting with your personal information. I\'ll guard it closely.');
 } else if (userName.length < 4) {
   alert('Did you know that there are some studies that show those with fewer characters in their name, tend to make more money? Thanks for visiting ' + userName + '.');
 }
 
-alert('Now that we have the introductions out of the way, please take a couple minutes to take play along with the following questiosn. Also, please only respond with Yes or No answers. Thanks ahead of time!');
+alert('Now that we have the introductions out of the way, please take a couple minutes to take play along with the following questions. For the first five questions, please only respond with Yes or No answers. Thanks ahead of time!');
 var numCorrect = 0;
 function questOne() {
   console.log('Checking responseOne before prompt, should be invalid', responseOne);
