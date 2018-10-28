@@ -34,7 +34,7 @@ function questTwo() {
   console.log('Checking responseTwo after prompt, should be valid', responseTwo);
   //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
   if (responseTwo === 'N' || responseTwo === 'NO') {
-    alert('You\'re right! I\'m currently living downtown no backyard so as a result, my girlfriend and I have two cats.');
+    alert('You\'re right! I\'m currently living downtown with no backyard so as a result, my girlfriend and I have two cats.');
     numCorrect++;
   } else {
     alert('Unfortunately, no. However, I do have two rescue cats who are actually brother and sister named Vader and Sky.');
@@ -76,7 +76,7 @@ function questFive() {
   console.log('Checking responseFive after prompt, should be valid', responseFive);
   //subsequent if then else statements quantify if 'Y,y,Yes,yes alert user accordingly, however if 'N,n,No,no' then(else) alert user accordingly
   if (responseFive === 'Y' || responseFive === 'YES') {
-    alert('A bit of a trick question as we live so close to AMAZING sushi. This is an absolute yes.');
+    alert('A bit of a trick question as I live so close to AMAZING sushi. This is an absolute yes.');
     numCorrect++;
     console.log('Checking number correct', numCorrect);
   } else {
@@ -85,7 +85,7 @@ function questFive() {
 }
 questFive();
 function questSix() {
-  var numGuess = 0;
+  var numGuess;
   var numAttempts = 0; //vairable limiting total number of attempts
   var origNumGuess = prompt('Try guessing how many apartments I have lived at the last 6 years in Seattle?');
   numGuess = parseInt(origNumGuess); // variable for while loop
@@ -131,7 +131,7 @@ function questSeven() {
         answer = true; //break out of the for loop
       }
     } if (answer === true) { // can also use variation if (answer) { alert}
-      alert('Congrats. My favorite animals are ' + favoriteAnimals + '.');
+      alert('Congrats. My favorite animals are a ' + favoriteAnimals[0] + ', ' + favoriteAnimals[1] + ', ' + favoriteAnimals[2] + ' and a ' + favoriteAnimals[3] + '.');
       numCorrect++;
       break; // for while loop
     } else {
