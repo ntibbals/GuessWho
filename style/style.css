@@ -5,12 +5,13 @@ body {
     padding-left: 150px;
     display: block;
     line-height: 18px;
+    font-family: 'Sinoty', sans-serif;
 }
 header {
     /* font-family: calibri, serif; */
     padding-top: 50px;
     color: aqua;
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
     box-sizing: outline;
     background-image: url("../images/skyline.jpg" );
@@ -18,6 +19,7 @@ header {
     height: 150px;
     padding-right: 20px;
     padding-left: 20px;
+    text-shadow: 2px 2px 7px #111111;
 }
 /* .skyline {
     box-sizing: outline;
@@ -47,7 +49,7 @@ nav {
     border: 1px solid rgb(17, 35, 61);
     /* border-left: 1px solid rgb(17, 35, 61);
     border-right: 1px solid rgb(17, 35, 61); */
-    font-family: 'Aldrich', sans-serif;
+    font-family: 'Sinoty', sans-serif;
     margin-top: 5px;
     padding: 5px;  
     box-sizing: outline;
@@ -60,12 +62,12 @@ nav {
 h1 {
     color: rgb(1, 18, 27);
     padding: 5px;
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     box-sizing: outline;
     text-shadow: 2px 2px 7px #111111;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2 {
