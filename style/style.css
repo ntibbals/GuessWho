@@ -11,7 +11,6 @@ body {
 header {
     /* font-family: calibri, serif; */
     padding-top: 50px;
-    color: aqua;
     font-size: 70px;
     text-align: center;
     box-sizing: outline;
@@ -47,7 +46,7 @@ nav {
     height: auto;
     text-align: center;
     text-transform: uppercase;
-    border: 1px solid rgb(17, 35, 61);
+    border: 1px solid white;
     /* border-left: 1px solid rgb(17, 35, 61);
     border-right: 1px solid rgb(17, 35, 61); */
     font-family: 'Sinoty', sans-serif;
@@ -66,7 +65,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     box-sizing: outline;
-    text-shadow: 2px 2px 7px #111111;
+    text-shadow: 2px 2px 7px white;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -117,7 +116,7 @@ h2 {
     font-size: 200%;
 }
 ul {
-    border: 2px solid black;
+    border: 2px solid white;
     padding-bottom: 5px;
     padding-top: 5px;
     padding-left: 35px;
