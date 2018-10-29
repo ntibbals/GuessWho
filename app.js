@@ -17,8 +17,9 @@ var numCorrect = 0;
 function questionsOneThroughFive() { }
 var questions = ['To start, ' + userName + ', try guessing if I am originally from the Seattle area?', 'Next, do you think I own a dog?', 'Once again, thanks for playing. Next, try guessing whether I am an only sibling?', 'Next, try taking a guess on whether you think I am more than 30 years old?', 'Try guessing if I like sushi?'];
 var answer = ['NO', 'NO', 'NO', 'YES', 'YES'];
+var answerB = ['N', 'N', 'N', 'Y', 'Y'];
 var responseTrue = ['That\'s right! I\'m not originally from the Pudget Sound. I\'m actually from the east side of the state.', 'You\'re right! I\'m currently living downtown with no backyard so as a result, my girlfriend and I have two cats.', 'You\'re right. I have both an incredible brother named Michael-Ray and awesome sister named Nicole', 'Ding ding, we have a winner. I\'m 31 years old.', 'A bit of a trick question as I live so close to AMAZING sushi. This is an absolute yes.'];
-var responseFalse = ['No. I was actually born in Spoakne Valley, WA!', 'Unfortunately, no. However, I do have two rescue cats who are brother and sister named Vader and Sky.', 'No. I was blessed with an awesome brother and sister!', 'No. I\'m 31 years old.', 'I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.'];
+var responseFalse = ['No. I was actually born in Spokane Valley, WA!', 'Unfortunately, no. However, I do have two rescue cats who are brother and sister named Vader and Sky.', 'No. I was blessed with an awesome brother and sister!', 'No. I\'m 31 years old.', 'I thought this was an easy one due to how spoiled the Seattle area is when it comes to great sushi. I absolutely enjoy sushi.'];
 // var guessAnswer = prompt( questions[a]).toUpperCase();
 console.log('Checking before loop', guessAnswer);
 for (var a = 0; a < questions.length; a++) {
@@ -26,7 +27,11 @@ for (var a = 0; a < questions.length; a++) {
     if (guessAnswer === answer[a]) {
       alert(responseTrue[a]);
       numCorrect++;
-    } else {
+    } else if (guessAnswer === answerB[a]) {
+      alert(responseTrue[a]);
+      numCorrect++;
+    } 
+    else {
       alert(responseFalse[a]);
     }
   }
